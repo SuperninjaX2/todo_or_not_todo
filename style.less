@@ -1,0 +1,68 @@
+@primary:#121212;
+@secondary: #512B81;
+@tertiary:#4477CE;
+@accent:#8CABFF;
+@text:#edf1ef;
+
+body{
+background-color: @primary;
+  color: @text;
+
+}
+main{
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  max-height: 70vh;
+}
+h1{
+  font-size: 1.7em;
+  font-weight: lighter;
+}
+input{
+  min-height: 10vh;
+height: auto;
+border-radius: 1pc;
+}
+button{
+  border: none;
+  font-size: 1.2em;
+  font-weight: lighter;
+  width: 30vw;
+  height:10vh;
+}
+.add{
+  background-color: @primary*3;
+  color: @text;
+  }
+.btn-delete{
+  background-color: #db2449;
+  color: @text;
+  height: 10vh;
+  font-size: 2rem;
+  margin-left: auto;
+}
+.box{
+  display: flex;
+  flex-direction: columm-reverse;
+  border-left: 2px solid @accent;
+  padding: 1em;
+  margin: 0.5em;
+  background-color: #2f3431;
+}
+@media only screen and (min-width: 800px){
+  h1{
+    font-size: 24px;
+  }
+  input{
+    width: 60vw;
+    height: 10vh;
+    font-size: 3em;
+  }
+  .box{
+    font-size: 1.9em;
+    padding: 0.5;
+  }
+    
+}
