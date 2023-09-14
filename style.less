@@ -17,13 +17,15 @@ main{
   max-height: 70vh;
 }
 h1{
+  color: @accent;
   font-size: 1.7em;
   font-weight: lighter;
 }
-input{
+textarea{
+  color: @text;
   min-height: 10vh;
 height: auto;
-border-radius: 1pc;
+background-color: @primary *2;
 }
 button{
   border: none;
@@ -35,6 +37,13 @@ button{
 .add{
   background-color: @primary*3;
   color: @text;
+  border-left: 1px solid @accent;
+  border-bottom: 1px solid @accent;
+  transition: border 1s;
+  }
+  .add:hover{
+    color: @accent;
+    border: 1px solid @accent;
   }
 .btn-delete{
   background-color: #db2449;
@@ -43,9 +52,13 @@ button{
   font-size: 2rem;
   margin-left: auto;
 }
+.content{
+  display: flex;
+  flex-direction: column-reverse;
+}
 .box{
   display: flex;
-  flex-direction: columm-reverse;
+  
   border-left: 2px solid @accent;
   padding: 1em;
   margin: 0.5em;

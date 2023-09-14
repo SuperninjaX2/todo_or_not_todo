@@ -5,10 +5,19 @@ let box = document.querySelector(".content")
 
 function getValue(){
   let value = document.getElementById("note").value;
-  return value
+  let empty="empty"
+  if (value=="") {
+    return empty
+  } else {
+    return value
+  }
 }
 
 function insertElements(value){
+  if(value=="empty"){
+    
+  }else{
+    
   
   let div = document.createElement("div")
   div.classList.add("box")
@@ -23,6 +32,7 @@ function insertElements(value){
   deleteBtn.classList.add("btn-delete");
   deleteBtn.innerHTML="X"
   div.appendChild(deleteBtn)
+}
 }
 function ADD(){
 insertElements(getValue())
