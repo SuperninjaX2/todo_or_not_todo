@@ -5,20 +5,12 @@ let box = document.querySelector(".content")
 
 function getValue(){
   let value = document.getElementById("note").value;
-  let empty="empty"
-  if (value=="") {
-    return empty
-  } else {
     return value
-  }
 }
 
 function insertElements(value){
-  if(value=="empty"){
+  if(value !=""){
     
-  }else{
-    
-  
   let div = document.createElement("div")
   div.classList.add("box")
   box.appendChild(div)
@@ -28,10 +20,13 @@ function insertElements(value){
   div.appendChild(p)
   p.innerHTML=value;
   
-  let deleteBtn = document.createElement("buttun");
+  let deleteBtn = document.createElement("button");
   deleteBtn.classList.add("btn-delete");
   deleteBtn.innerHTML="X"
   div.appendChild(deleteBtn)
+  deleteBtn.addEventListener("click",function(){
+    div.remove()
+  })
 }
 }
 function ADD(){
